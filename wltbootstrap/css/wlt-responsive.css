@@ -1,0 +1,296 @@
+/*
+* WLT Responsive Media Queries
+*/
+
+
+
+/* Tablet Landscape width to 960px */
+@media only screen and (min-width: 850px) and (max-width: 990px) {
+
+  body {
+    min-width: 850px;
+  }
+  
+  .header-right { display: none;}
+
+}
+
+/* All Mobile Widths */
+@media only screen and (max-width: 849px) {
+
+	body { min-width: 300px; }
+	
+	#block-views-sections-issue {
+  		text-align: center;  }
+  
+  	#header {
+		display:none;}
+		
+	.navbar-toggle {
+    display: block !important;
+  }
+	 .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+			
+	.logo {min-width:225px;}
+	
+	#footnotediv {
+	position:absolute;
+	margin-left:5px;
+	overflow:visible;
+}
+  
+	.two-column-grid {
+	display: inherit; text-align: left; width:100%;}
+	.four-column-grid {
+	display: inline; text-align: center; float: left; }
+    .three-column-grid {
+	display: inline; text-align: left; float: left; }
+	.three-column-recs {
+	display: inline; text-align: center; float: left; }
+	
+	.nested-3col{
+	text-align: center; /* To center magazine issue content in TOC view */
+	}
+	
+	.sectionheader h3 { max-width: 100%; /*To fill space in this screen view*/
+	}
+	
+	#block-views-issue-current-or-back-block img {
+		text-align:center;
+	}
+
+	#sidebar-second{
+	background:none; width: 100%; padding-left: 10px; }
+    
+	.toc4col {
+  border-left: none; padding-left: 0px; }
+	
+	.views-view-grid {
+	display: inherit;
+	table-layout: fixed;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+	vertical-align: top; }
+	
+	.views-field-field-thumbnail {
+	float: left;
+	width: 33%;
+	height: auto;
+	padding-right: 10px;
+	}
+	
+	.align-left, .align-right, .align-center {
+    margin-bottom: 0;
+}
+	
+	#wrapper {
+  border-left: none;
+  border-right:none;
+  border-top: none;}
+
+}
+
+/* Mobile Landscape Width to Tablet Portrait Width */
+@media only screen and (min-width: 480px) and (max-width: 849px) {
+
+  body {
+    min-width: 480px;
+  }
+  
+  .header-right { display: none;}
+	
+	/* To prevent slideshow from overlapping image over text. */
+	#views_slideshow_cycle_main_homepage_slideshow-block_1 {
+	display:block;
+	width:100%;
+	height: auto;
+}
+
+	.views-slideshow-controls-bottom {
+    display: block;
+	max-width: 100%;
+	padding-left: none;
+}
+	.skin-default {
+	display: block;
+	width: 100%;
+	height: auto;
+}/* To prevent slideshow from overlapping image over text. */
+  
+  #wrapper {
+  border-left: none;
+  border-right:none;
+  border-top: none;}
+  
+  .wltfooter {
+  text-align: center;}
+  .wltfooter .imageleft {
+  float: none;}
+
+	.sectionheader h3 { max-width: 100%; /*To fill space in this screen view*/
+	}
+
+	.simplead-container img {
+		max-width: 300px;
+	}
+}
+
+
+
+/* Portrait Mobile Width */
+
+@media only screen and (max-width: 480px) {
+
+	
+	#access {
+		position:fixed;
+	}
+	
+	#header {
+	display:none;
+	}
+	
+	#maincontent {
+	margin-top:2.5em;
+}
+	#pigeon-widget-status {
+		margin-top:50px;
+	}
+	.breadcrumb {
+		display:none;
+	}
+	
+	.region-preface-top {
+	position:relative;
+	float:left;
+}
+
+	.imageleft {
+		float:none !important; display: block; } /* To prevent any word-wrapped images from breaking titles or paragraphs of text. */
+	.imageright {
+		float:none !important; display: block; } /* To prevent any word-wrapped images from breaking titles or paragraphs of text. */
+	.simplead-container img {
+		max-width: 300px;
+	}
+	
+	/* To prevent slideshow from overlapping image over text. */
+	#views_slideshow_cycle_main_homepage_slideshow-block_1 {
+	display:block;
+	width:100%;
+	height: auto;
+}
+
+	.views-slideshow-controls-bottom {
+    display: block;
+	max-width: 100%;
+	padding-left: none;
+}
+	.skin-default {
+	display: block;
+	width: 100%;
+	height: auto;
+}/* To prevent slideshow from overlapping image over text. */
+	
+		
+	#footnotediv {
+	position:absolute;
+	margin-left:5px;
+	max-width:100%;
+	overflow:visible;
+}
+	.nivo-caption {
+	position: inherit;
+	}
+	
+	.wltfooter {
+	text-align: center;}
+	.wltfooter .imageleft {
+	float: none;}
+}
+
+/* CKEditor Image2 Module Default to responsive images. Note:Used CSS hook alter in template.php file to turn of CKEditor Image2's Responsive CSS */
+img {
+  vertical-align: baseline;
+  max-width: 100%;
+  height: auto !important;
+}
+@media (max-width: 480px) {
+  .align-right,
+  .align-left {
+    margin-left: 0;
+    margin-right: 0;
+	float:none !important; display: block;
+  }
+}
+@media (min-width: 481px) {
+  .align-left {
+    float: left;
+    margin-right: 1em;
+    max-width: none;
+  }
+  .align-right {
+    float: right;
+    margin-left: 1em;
+    max-width: none;
+  }
+}
+/* Narrow screens & tablets */
+@media (min-device-width: 740px) and (min-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation: landscape) {
+  .align-left {
+    max-width: none;
+  }
+  .align-right {
+    max-width: none;
+  }
+}
+/* Normal screens */
+@media (min-device-width: 980px) and (min-width: 980px), (max-device-width: 1024px) and (min-width: 1024px) and (orientation: landscape) {
+  .align-left {
+    max-width: none;
+  }
+  .align-right {
+    max-width: none;
+  }
+}
+/* Wide screens */
+@media (min-width: 1220px) {
+  .align-left {
+    max-width: none;
+  }
+  .align-right {
+    max-width: none;
+  }
+}
+

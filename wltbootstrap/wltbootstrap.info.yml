@@ -1,0 +1,27 @@
+name: wltbootstrap
+type: theme
+description: 'wltbootstrap subtheme based on Bootstrap 5 theme.'
+core_version_requirement: '^8.9 || ^9'
+'base theme': bootstrap5
+libraries:
+  - wltbootstrap/global-styling
+stylesheets-remove:
+  - '@bootstrap5/css/style.css'
+regions:
+  sidebar_first: Sidebar first
+  sidebar_second: 'Sidebar second'
+  highlighted: 'Highlighted'
+  header_top: ' Header top'
+  header: 'Header'
+  main_menu:  Main menu
+  preface_top: 'Preface top'
+  preface_bottom: 'Preface bottom'
+  abovetitle: 'Above Title'
+  content_top: 'Content top'
+  content: 'content'
+  postscript_top: 'Sidebar first'
+  postscript_bottom: 'Postscript bottom'
+  footer: 'Footer'
+  help: 'Help'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

@@ -1,0 +1,2247 @@
+ap/* Reset */
+fhtml, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, 
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+}
+
+html { font-size:100%;}
+
+/* Google Web Fonts Import */
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Oswald|PT+Serif|Roboto+Slab&display=swap');
+
+/* Glyphicon Elements  */
+
+/*@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+} */
+
+.glyphicon-search:before {
+  content: "\e003";
+} 
+
+.sidr-class-glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sidr-class-glyphicon-search:before {
+  content: "\e003";
+}
+
+
+/* Basic text and body styling */
+
+h1, h2, h3, h4, h5, h6, p, p:last-child, blockquote, form, label, ul, ol, dl, fieldset, address {
+    margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Libre Baskerville', Georgia, Times, serif;
+}
+
+h1 {
+font-size:2.3em;
+line-height:1.4em;
+font-weight:500;
+}
+
+h2 {
+	font-size:2em;
+	line-height: 1.3em;
+	font-weight:500;
+}
+
+h3 {
+	font-size:1.35em;
+	line-height:1.25em;
+	font-weight:600;
+}
+
+h4 {
+	font-size:1.1em;
+	font-weight:600;
+}
+
+h5 {
+	font-size:12px;
+	font-weight:600;
+}
+
+h6 {
+	font-size:10px;
+	font-weight:600;
+}
+
+hr {
+display: block;
+-webkit-margin-before: 0.5em;
+-webkit-margin-after: 0.5em;
+-webkit-margin-start: auto;
+-webkit-margin-end: auto;
+border-width: 1px;
+border-color:#ddd;
+border-left:none;
+border-right:none;
+}
+
+a {
+text-decoration:none;
+color:#039
+}
+
+a:hover {
+text-decoration:none;
+color:#06C
+}
+
+a img {
+border:0 none
+}
+
+blockquote	{ margin-left: 40px; margin-right: 40px }
+
+
+body {
+font-family: Georgia, Times, serif;
+line-height:1.5em;
+font-size:1em;
+background-color:#fff;
+}
+
+figure {
+	background: none;
+}
+
+figure > figcaption {
+    text-align: inherit;
+    font-family: 'Roboto',Helvetica,sans-serif;
+	font-size: .75em;
+    color: #555;
+    display: block;
+    margin: 0 0 2em 0;
+    padding: .3em 1em .75em;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+img.border {
+	border: 1px solid #000;
+	
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+-webkit-box-align: center;
+text-align: center;
+cursor: default;
+color: buttontext;
+padding: 5px 6px 5px;
+border: 1px outset buttonface;
+border-image: initial;
+background-color: buttonface;
+box-sizing: border-box;
+}
+
+a.btn {
+background: #002044;
+color: #FFFFFF!important;
+padding: 0.75em 1.5em;
+margin: 1em 3em 0;
+font-size: 100%;
+line-height: 1.3;
+display: inline-block;
+border: 0 none;
+border-radius: 4px;
+cursor: pointer;
+text-decoration: none;
+white-space: nowrap;
+}
+
+.breadcrumb {
+  text-transform: uppercase;
+  font-family: 'Roboto',Helvetica,sans-serif; 
+  font-size:.75em;
+  }
+  
+.breadcrumb a {
+	color: #333;
+}
+.breadcrumb a:hover{
+	text-decoration:underline;
+} 
+
+  
+embed, object, video, iframe {
+max-width: 100%;
+}
+
+
+/* Basic Page Structural Styles */
+
+div#container {
+float:left;
+width:100%;
+margin:0 -300px 0 0
+}
+
+div#content {
+margin:0
+}
+
+#header {
+height: 110px;
+margin-bottom:15px;
+vertical-align:baseline;
+}
+
+#header-right {
+	margin-top: 40px;
+    text-align: right;
+    font-size: .75em;
+    line-height: 1.75em;
+	display:flex;
+	justify-content: flex-end;
+}
+
+#maincontent {
+	margin-top:0em;
+}
+
+.logo {
+  background: transparent url('../fonts/wltlogo-nav.png') no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  height: 50px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  text-indent: -999em;
+  top: 0;
+  z-index: 999;
+  }
+  
+  .logo-nav {
+  float:left;
+  margin: 0;
+  padding: 4px 0 0 0;
+  }
+  
+  .logo-nav-min-white {
+  background: transparent url('../fonts/wltlogo-nav-white.png') no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  height: 30px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  text-indent: -999em;
+  top: 0;
+  width:195px;
+  z-index: 999;
+  }
+  
+  /* Logo styling for Retina Display Devices */
+  
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
+  .logo {
+  background: transparent url('../fonts/wltlogo-nav-2x.png') no-repeat;
+  background-size: 225px 40px ;
+  height: 40px;
+  }
+}
+
+.simplead-container img {
+	margin-bottom: 1em;
+	text-align: center;
+
+}
+
+.socialicons {
+	margin:auto;
+	position: relative;
+	}
+
+#wrapper {
+max-width:1170px;
+position:relative;
+background-color:#fff;
+margin:0 auto;
+}
+
+
+/* NAVIGATION MENU STYLING */
+
+#access {
+	/* height:50px; */
+	margin-bottom:10px;
+	position: sticky;
+	position: -webkit-sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 99;
+	-webkit-transform: translate3d(0,0,1px);
+transform: translate3d(0,0,1px);
+}
+
+.region-preface-top {
+	position:relative;
+	float:right;
+}
+
+div.menu ul,div.menu ul ul {
+line-height:1;
+list-style:none;
+padding:0;
+margin:0
+}
+
+div.menu ul a {
+display:block;
+text-decoration:none
+}
+
+div.menu ul li ul {
+left:-999em;
+position:absolute
+}
+
+div.menu ul li:hover ul,div.menu ul li.sfhover ul {
+left:auto;
+background-color:#f7f7f7
+}
+
+.children {
+text-decoration:none
+}
+
+
+div.menu ul ul {
+border:1px solid #D5D5D5;
+z-index:999;
+}
+
+div.menu ul li {
+border-right-width:1px;
+border-right-style:solid;
+border-right-color: #e7e7e7
+}
+
+div.menu,div.menu a { /* CUSTOM */
+font-family: "Droid Serif", Georgia, Times, serif;
+font-size: 10pt;
+font-weight: 500;
+color:#036;
+padding-left:0px; /* was 255 */
+
+}
+
+div.menu ul li a {
+line-height:45px;
+font-size: 10pt;
+padding:0 1em;
+
+}
+
+div.menu ul li a:hover,div.menu ul li.current_page_item a {
+background-color:#f7f7f7
+}
+
+
+#list {
+list-style-type:circle;
+width:400px;
+text-align:left;
+}
+
+div.menu ul li ul li {
+border:0 none;
+float:none
+}
+
+div.menu ul li ul li a {
+padding-right:5em;
+font-size:1em;
+background-color:#FFF
+}
+
+div.menu ul li ul li a,div.menu ul li ul li a:hover,div.menu ul li.current_page_item ul li a {
+background-image:none;
+}
+
+div.menu ul li ul li a:hover,div.menu ul li ul li.current_page_item a {
+text-decoration: underline;
+background-image:none
+}
+
+.more-link {
+font-family: 'Roboto',Helvetica,sans-serif; 
+font-size: .9em;
+}
+
+/* Added sidr styles 6/25/2015 to use with Responsive Menu module and Sidr Library */
+.sidr {
+font-family: "Droid Serif", Arial, Helvetica, sans-serif;
+}
+
+#sidr-wrapper-0 {
+  height: 40px;
+  background: #222;
+  margin-bottom: 5px;
+  text-align: left;
+  line-height: 40px;
+  position: fixed; /* Added these styles to make Sidr sticky on top of browser 7/7/15 */
+        top: 0px;
+        width: 100%;
+        z-index: 999;
+}
+
+#sidr-0-button {
+  margin-left: 5px;
+  color: #fff;
+  padding: 5px 10px 8px;
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.8em;
+}
+
+.sidr-class-input-group{
+	display: flex;
+}
+
+.sidr-class-element-invisible {
+	display: none;
+}
+
+.sidr ul li{
+line-height:45px}
+
+.sidr ul li:hover,.sidr ul li.active,.sidr ul li.sidr-class-active{line-height:45px}
+
+.sidr ul li ul li{
+  line-height: 33px;
+  font-size: 13px;
+}
+
+.sidr ul li ul li:hover,.sidr ul li ul li.active,.sidr ul li ul li.sidr-class-active{line-height:33px}
+
+#sub-nav {
+font-family:"Roboto Slab",arial,sans-serif
+}
+
+
+/* Pantheon/Apache Solr Search Styling */
+.search-results .title {
+font-size: 1em;
+text-decoration: underline;
+font-weight: bold;
+}
+
+.search-results .search-snippet-info {
+padding-left: 1em;
+font-size: .8em;
+font-family: 'Roboto',Helvetica,sans-serif; 
+line-height: 1.5em;
+}
+
+.search-results li {
+	margin-bottom: 1em;
+	border-bottom: thin dotted #333;
+	list-style-type:none;
+}
+
+/* Views Custom Search Results Page Styling */
+
+
+#views-exposed-form-search-results-page button {
+	margin-top: 2em;
+}
+
+#views-exposed-form-search-results-page label {
+	margin-bottom: .25em;
+}
+
+/* Facet API Styling */
+
+.block-facetapi {
+	max-width: 25%;
+	display: -webkit-inline-box;
+	margin-bottom: 2em;
+	
+}
+.block-facetapi h2 {
+    font-family: "Oswald",arial,sans-serif;
+	font-size: 1em;
+	text-transform:uppercase;
+	margin-bottom: 0em;
+}
+
+.facetapi-facetapi-dropdowns-checkbox-links {
+	border: none;
+	padding: 0px;
+}
+
+.facetapi-facetapi-dropdowns-checkbox-links li {
+	padding: 5px 5px;
+}
+
+
+/* All #header-search replaced with #search-block-form */
+
+div#block-search-form {
+    float: right;
+    width: 200px;
+    height: 50px;
+    padding: 8px 5px;
+}
+
+#edit-search-block-form--2 {
+    width: 175px;
+    height: 34px;
+}
+
+#user-login #edit-submit {
+	background-color: #003366;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+    margin: 0 auto;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+/* Sidebar styling */
+
+.issue-left-sidebar {
+width: 31.914893617021%;
+float: left;
+}
+
+.sidebar a:hover {
+color:#039;
+text-decoration:underline;
+}
+
+div.sidebar p {
+font-family: Georgia,serif;
+font-size: .9em;
+line-height: 1.5em;
+}
+
+.sidebar {
+font-size:0.9em;
+padding-bottom:10px;
+}
+
+#sidebar-second{
+background:none;
+}
+
+.sidebar ul {
+margin:0 0 0 15px;
+padding:0
+}
+
+.left3colsidebar {
+background-color:#f7f7f7;
+font-family:'Roboto',Helvetica,sans-serif; 
+font-size:.8em;
+color:#555;
+padding:15px;
+margin-bottom:1em;
+}
+
+.toc4col {
+padding-left:10px
+}
+
+.toc4col h2 {
+	font-family:'Libre Baskerville', Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+	font-weight:normal;
+	/* padding:10px 0 0 0; */
+	padding:10px 15px 0 0;
+}
+
+.toc4col h2 a {
+	color: #000;
+}
+
+.toc4col h2 a:hover {
+	text-decoration: underline;
+}
+
+.sectionheader h3 {
+font-family: "Oswald", Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 1em 0 .25em 0;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+}
+
+.toc4col ul li {
+	font-family: 'Roboto',Helvetica,sans-serif; 
+	font-size: .85em;
+	line-height: 1.4em;
+	display: block;
+	padding-right: 15px;
+	margin-left: -35px;
+	margin-bottom: .95em;
+	}
+	
+.toc4col ul {
+	margin-top:-10px;
+}
+
+.toc4col p {
+	font-family: 'Roboto', arial, sans-serif;
+	text-align:left;
+	padding:0 10px 0 5px;
+	line-height:1.7;
+}
+
+#block-views-sidebar-issue-info-block{
+	background:#f7f7f7;
+}
+.toccurent {
+	background: #f7f7f7;
+}
+.toccurrent img {
+float: left;
+padding: 10px;
+}
+
+.toccurrent p {
+font-family:'Roboto Slab', "helvetica neue", arial, sans-serif;
+font-size: .75em;
+line-height: 1.4em;
+color: #666;
+padding: 0 10px;
+}
+
+.toc ul li {
+display:block
+}
+
+.toctitle {
+font-family:'Roboto',Helvetica,sans-serif; 
+font-size:12px
+}
+
+.toccurrent h2 {
+color: #333;
+font-family:'Roboto', Helvetica, sans-serif;
+font-size: 1em;
+padding-top:10px;
+text-transform:uppercase;
+}
+
+.issue-title, .issue-title a {
+	color: #333;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+/* Stops width from creating a horizontal scrollbar */
+#fb-root > div {
+	left: -575px !important;
+}
+/* Footer styling */
+
+/* #footer { */
+.region-postscript-top {
+	margin-top:1em;
+	background-color: #000;
+	padding:1em 0
+}
+
+/* #footer,#footer a,#footer a:hover { */
+.region-postscript-top, .region-postscript-top a, .region-postscript-top a:hover {
+font:'Roboto',Helvetica,sans-serif, #FFF;
+}
+
+/* #footer a,#footer a:hover { */
+.region-postscript-top a, .region-postscript-top a:hover {
+background:none;
+}
+
+/* Name change for Drupal
+div#footer { */
+div.region-postscript-top { 
+clear:both;
+width:100%;
+}
+
+.wltfooter {
+font-family:'Roboto',Helvetica,sans-serif;
+font-size:.9em;
+line-height: 1.65em;
+color:#FFF
+}
+
+.wltfooter a {
+font-family:'Roboto',Helvetica,sans-serif ;
+color:#FFF
+}
+
+.wltfooter a:hover {
+text-decoration:underline;
+}
+
+.wltfooter ul {
+margin-top: 0px;
+padding: 0 20px;
+}
+
+.wltfooter ul li {
+  list-style-type: none;
+  line-height: 1.65em;
+  font-size: 13px;
+  margin-bottom: .25em;
+}
+
+
+/* global footer styling for OU */
+
+#global_footer {
+	background-color:transparent;
+	font-family:'Roboto',Helvetica,sans-serif;
+	font-size:0.9em;
+	text-align:center;
+	padding:20px 0 10px
+}
+
+#global_footer a,#global_footer a:visited,#global_footer a:active {
+	color:#333;
+	font-size:0.9em;
+	text-decoration:none
+}
+
+#global_footer p {
+	color:#333;
+	line-height:1.6em;
+	text-align:center;
+	font-size:0.9em;
+	margin:0;
+	padding:10px 0 0
+}
+
+/* General Page Design & Typography Elements */
+
+div.archiveissue {
+	font-family:'PT Serif',arial,sans-serif;
+	font-size:.9em;
+	text-transform:uppercase;
+	text-align:center
+}
+
+.bio {
+	font:.8em 'Roboto',Helvetica,sans-serif; 
+	color:#000
+}
+
+.blog-summary{
+	padding: 0px 5px;
+	color: #333;
+	font-family: 'Roboto',Helvetica,sans-serif; 
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 13px;
+}
+
+.caption{
+	padding: 4px 7px;
+	color: #999;
+	font-size: .75em;
+	line-height: 14px;
+	margin-bottom: 10px;
+}
+
+.content-box {
+	background-color: #f7f7f7;
+	border: 1px solid #ccc;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	color: #555;
+	padding: 2em;
+	margin-bottom:1em;
+}
+
+.content-wlt {
+	color:#333;
+	font:.8em 'Roboto',Helvetica,sans-serif; 
+} /* Drupal views uses .content by default, so changing to .content-wlt */
+
+.content-wlt h1 a:hover {
+	color:#000;
+	text-decoration:underline
+}
+
+.content-wlt h1 {
+	font-size:18px;
+	font-style:normal;
+	font-weight:bold;
+	color:#000
+}
+
+.content-wlt h2 {
+	font-size:16px;
+	font-weight:400;
+	color:#333
+}
+
+.cover-image {
+	text-align: center;
+}
+
+.cover-image-archive img {
+	width: 138px;
+	height: auto
+}
+
+div.currentevent {
+	padding-left: 5px;
+	margin-left: -5px;
+}
+
+.download {
+	background-color:#f7f7f7;
+	width:70%;
+	font:12px/1.4 'Roboto',Helvetica,sans-serif; 
+	vertical-align:middle;
+	padding:15px;
+	float:left;
+}
+.download p{
+	margin-bottom:0;
+}
+
+p span.dropcap {
+	color:#333;
+	float:left;
+	font-size:5em;
+	line-height:.8;
+	margin-right:5px;
+	margin-top:2px;
+	text-transform:uppercase
+}
+
+.featured-review {
+	background-color: #f7f7f7;
+	border: 1px solid #ccc;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	margin-bottom: 10px;
+	margin-left: -10px;
+	padding: 10px;
+	color: #000;
+}
+
+.featured-review-homepage {
+	padding: 0 45px 0 45px;
+} 
+
+.view-homepage-featured-rows h3 {
+	font-family: "Oswald", Helvetica, sans-serif;
+	text-transform: uppercase;
+	padding: 1em 0 .25em 0;
+	border-bottom: 1px solid #ccc;
+	color: #000;
+}
+
+.view-homepage-field-author {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: .9em;
+	margin-bottom: 7px;
+}
+
+.view-homepage-field-author a, .view-homepage-field-rich-title a  {
+	color: #000;
+} 
+
+.view-homepage-field-rich-title {
+	font-size: 1.1em;
+	font-weight: 900;
+	margin-bottom: .25em;
+}
+
+.views-field-field-featuredreview-1 {
+	font-family: 'Oswald', Helvetica, sans-serif;
+	font-size: 1.25em;
+	padding-bottom: 7px;
+}
+
+.galleria-container {
+	max-width: 100%;
+	min-height: 325px;
+}
+
+.galleria-image img {max-width: none;}
+
+.galleria-images, .galleria-image {max-width: 100%;}
+
+.galleria-info-description a{
+	color:#bbb;
+	text-decoration: underline;
+}
+
+.imageleft {
+	float:left;
+	margin:0 15px 10px 0
+}
+
+.imageright {
+	float:right;
+	margin:0 0 10px 10px
+}
+
+.intro {
+	font:12px/1.4 'Roboto',Helvetica,sans-serif; 
+}
+
+.label-inline {
+	float: left;
+	font-family: 'Roboto',Helvetica,sans-serif; 
+	font-size: .75em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.multipagestory {
+	font-style:normal;
+	font-family:'Roboto',Helvetica,sans-serif; 
+	font-size:.8em;
+	color:#000;
+}
+
+.phototag {
+	float:right;
+	font:10px/12px 'Roboto',Helvetica,sans-serif; 
+	margin:0px;
+}
+
+.phototagleft {
+float:left;
+font:10px/12px 'Roboto',Helvetica,sans-serif; 
+}
+
+.premium-content {
+	background: #002044;
+	clear: both;
+	color: #fff;
+	font-family: 'Oswald',Helvetica,sans-serif;
+	font-size: .8em;
+	font-weight: normal;
+	padding: 1px 4px 1px 4px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.pullquote {
+	float:left;
+	background-image:url(../images/quotes.png);
+	background-repeat: no-repeat;
+	background-position-x: 0;
+	background-position-y: 0;
+	font-family: 'Libre Baskerville',Georgia,serif;
+	color: #333;
+	font-size: 1.25em;
+	line-height: 1.5em;
+	margin: 5px 10px 10px 0;
+	padding: 5px 0 15px 25px;
+	width:100%;
+}
+
+div#secondary {
+	clear:right;
+}
+
+div.sidebar .title {
+	font-weight:700;
+	font-size:1.1em
+}
+
+#skip-link {
+	display:none
+}
+
+.small-caps {
+	font-variant:small-caps;
+}
+
+.storypagination {font-style:normal;
+	font-family:'Roboto',Helvetica,sans-serif; 
+	font-size: .8em;
+	color: #000;
+	text-align:right;
+}
+
+.storysubnav {
+	background-color:#f7f7f7;
+	padding:10px;
+	margin-bottom:1em;
+}
+
+.storysubnav h1, h2, h3, h4, h5, h6 {
+	margin-bottom:12px;
+	color:#000
+}
+
+.summary {
+	font: .75em 'Libre Baskerville',Georgia,serif;
+  color: #777;
+  line-height: 1.5em;
+}
+
+.tagline {
+	font:11px/12px 'Roboto',Helvetica,sans-serif; 
+}
+
+.toc ul li {
+	display:block
+}
+
+.toctitle {
+	font-family:'Roboto',Helvetica,sans-serif; 
+	font-size:.8em
+}
+
+.tweet {
+	background: #f1f1f1;
+	margin-top: 5px;
+  padding: 2px 5px;
+  font-family: 'Roboto',Helvetica,sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  float: right;
+}
+
+.tweet img {
+	width: 23px;
+  height: 19px;
+  vertical-align: middle;
+  padding: 4px;
+}
+
+.web-exclusive {
+	vertical-align: middle;
+}
+
+.zinio h2 {
+	color:#FFF;
+	font-family:'Roboto',Helvetica,sans-serif; 
+	font-size:14px;
+}
+
+/* floating footnote div */
+#footnotediv {
+	position:absolute;
+	width:400px;
+	overflow:visible;
+}
+#footnotediv div {
+	background-color:#f7f7f7;
+	font-family:'Roboto',Helvetica,sans-serif; 
+	font-size:.8em; 
+	padding:3px;
+	padding-left:10px;
+	padding-right:10px;
+	border:1px solid #CDBBB5;
+	-webkit-box-shadow:#555 0 0 5px;
+	-moz-box-shadow:0 0 5px #555;
+	box-shadow:#555 0 0 5px;
+}
+a.footnotebacklink {
+	border-bottom:none;
+}
+a.footnotebacklink img {
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+/* fix sup breaking line heights */
+/* https://gist.github.com/413930 */
+
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;
+}
+
+sup a {
+	margin:-10px;
+	padding:10px;
+	text-decoration:none;
+	border-bottom:none;
+}
+
+
+
+/*Table styling */
+
+table {
+	border-collapse:separate;
+	border-spacing:2px 2px;
+
+}
+
+thead {
+	background-color:#FFF;
+	display:table-header-group;
+	vertical-align: middle;
+	text-align:center;
+	border-color:#036
+}
+
+tbody {
+	display:table-row-group;
+	vertical-align:middle;
+	border-color:inherit
+}
+
+#box-table-a th {
+	background:#FFF;
+	border-bottom:1px solid #036;
+	color:#036;
+	border-top:2px solid #036;
+	padding:8px
+}
+
+#box-table-a td {
+	background:#f7f7f7;
+	border-bottom:1px solid #FFF;
+	color:#000;
+	border-top:1px solid transparent;
+	padding:8px
+}
+
+#box-table-a td a {
+	color:#036;
+	font:'Roboto',Helvetica,sans-serif;
+	font-weight:normal;
+}
+
+#box-table-a td a:hover {
+	font:'Roboto',Helvetica,sans-serif;
+	text-decoration:underline;
+}
+
+#box-table-b th {
+	background:#FFF;
+	border-bottom:1px solid #036;
+	color:#036;
+	border-top:2px solid #036;
+	padding:3px
+}
+
+#box-table-b td {
+	background:#f7f7f7;
+	border-bottom:1px solid #FFF;
+	color:#000;
+	border-top:1px solid transparent;
+	padding:5px
+}
+
+#basictable{
+	border:none;
+}
+
+#basictable td {
+	padding:10px;
+}
+
+form#commentform .form-label {
+	margin:1em 0 0
+}
+
+form#commentform span.required {
+	background:#fff;
+	color:#c30
+}
+
+form#commentform,form#commentform p {
+	padding:0
+}
+
+input#author,input#email,input#url,textarea#comment {
+	padding:0.2em
+}
+
+div.comments ol li {
+	margin:0 0 3.5em
+}
+
+textarea#comment {
+	height:13em;
+	overflow:auto;
+	width:66%;
+	margin:0 0 0.5em
+}
+
+.alignright,img.alignright {
+	float:right;
+	margin:1em 0 0 1em
+}
+
+.alignleft,img.alignleft {
+	float:left;
+	margin:1em 1em 0 0
+}
+
+.aligncenter,img.aligncenter {
+	display:block;
+	text-align:center;
+	margin:1em auto
+}
+
+div.gallery {
+	clear:both;
+	height:180px;
+	width:100%;
+	margin:1em 0
+}
+
+div.gallery dl {
+	overflow:hidden;
+	text-align:center;
+	margin:1em auto
+}
+
+div.gallery dl.gallery-columns-1 {
+	width:100%
+}
+
+div.gallery dl.gallery-columns-2 {
+	width:49%
+}
+
+div.gallery dl.gallery-columns-3 {
+	width:33%
+}
+
+div.gallery dl.gallery-columns-4 {
+	width:24%
+}
+
+div.gallery dl.gallery-columns-5 {
+	width:19%
+}
+
+div#nav-above {
+	margin-bottom:1em
+}
+
+div#nav-below {
+	margin-top:1em
+}
+
+div#nav-images {
+	height:150px;
+	margin:1em 0
+}
+
+div.navigation {
+	height:1.25em
+}
+
+div.navigation div.nav-next {
+	float:right;
+	text-align:right
+}
+
+div.sidebar h3 {
+	font-family:'Oswald', Helvetica, sans-serif;
+	font-size:1.3em;
+	margin: 0 0 5px 0 !important;
+}
+
+div.sidebar input#s {
+	width:7em
+}
+
+div.sidebar li {
+	list-style:none;
+	margin:0 0 2em
+}
+
+div.sidebar li form {
+	margin:0.2em 0 0;
+	padding:0
+}
+
+div.sidebar ul ul {
+	margin:0 0 0 1em
+}
+
+div.sidebar ul ul li {
+	list-style:disc;
+	margin:0
+}
+
+div.sidebar ul ul ul {
+	margin:0 0 0 0.5em
+}
+
+div.sidebar ul ul ul li {
+	list-style:circle
+}
+
+div.menu ul li,div.gallery dl,div.navigation div.nav-previous {
+	float:left;
+	font-family:Georgia, "Times New Roman", Times, serif
+}
+
+input#author,input#email,input#url,div.navigation div {
+	width:50%
+}
+
+html,* html body {
+	margin-top:0px !important;
+	-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+#header-text,#rss_icon {
+	padding:1em
+}
+
+.entry-title a,div.currentevent h2 a,div.currentevent h1 a,.content h1 a {
+	color:#000
+}
+
+/* TODO Sidebar links turn black and indistinguishable from nonclickables */
+.sidebar,.entry-date,.entry-meta,.entry-meta a{
+	color:#333
+}
+
+/* DRUPAL ADDITION FOR EVENTS AND NEWS AND BOOK CLUB LISTS */
+
+.author-tax-bio {
+	background-color: #f7f7f7;
+	color:#333;
+	line-height:1.4em;
+	padding: 15px;
+	padding-bottom:0px;
+	overflow: hidden;
+}
+
+/* Form items */
+
+.form-item .description {
+	font-family: 'Roboto',Helvetica,sans-serif;
+  font-size: .75em;
+  margin-bottom: 1em;
+    }
+
+/*Pagination and Items per Page */
+
+div.form-item-items-per-page {
+	float:right;
+	font:.8em 'Roboto',Helvetica,sans-serif;
+	color:#000
+	
+}
+
+div.item-list ul.pager {
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+ 
+.pager {
+  height: 36px;
+  margin: 18px 0;
+  font:14px 'Roboto',Helvetica,sans-serif;
+	color:#000
+}
+ul.pager li {
+	display: inline;
+	list-style: none;
+}
+
+li.pager-item {
+  margin: 0;
+  padding:5px 10px 5px 10px;
+  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	
+}
+
+li.pager-item a:hover {
+	background-color:#f7f7f7;
+}
+
+li.pager-current{
+	 margin: 0;
+  padding:5px 10px 5px 10px;
+  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color:#f7f7f7
+
+}
+
+div.submitted {
+	font:11px 'Roboto',Helvetica,sans-serif;
+	color:#000
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+margin-top: 0em;
+}
+
+/* DRUPAL STYLING FOR VARIOUS BLOCK, FIELD, AND VIEW OUTPUTS */
+
+
+.date-display-single {
+	font-family:'Roboto',arial, sans-serif;
+	font-size:.9em;
+	font-weight:500;
+	padding-right:2px
+	}
+	
+.field .field-label {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: italic;
+    font-weight: normal
+    }
+	
+.field-name-field-author {
+	font-family:'Libre Baskerville', Georgia, serif;
+	font-size:1em;
+	margin-bottom:7px;
+}
+
+.field-name-field-author a {
+	color:#000
+}
+
+.field-name-field-author a:hover {
+	color:#000;
+	text-decoration:underline
+}
+
+
+.field-name-field-authorcountry {
+	font-family:'Libre Baskerville', Georgia, serif;
+	font-size: .8em;
+}
+
+.field-name-field-authorcountry a {
+	color:#333;
+}
+
+.field-name-field-authorcountry a:hover {
+	color:#333;
+	text-decoration:underline;
+}
+
+.field-name-field-blogauthor {
+	font-family:'Roboto',arial,sans-serif;
+	font-size:.9em;
+	font-weight:500;
+	padding-left:3px
+}
+.field-name-field-blogauthor a {
+	color: #036;
+}
+.field-name-field-blogauthor a:hover {
+	color: #036;
+	text-decoration:underline;
+}
+
+.field-name-field-blog-category{
+	font-family:"Oswald",arial, sans-serif;
+	font-size:.9em;
+	font-weight:600;
+	text-transform:uppercase;
+	}
+.field-name-field-blog-category a{
+	color:#036;
+	}
+.field-name-field-blog-category a:hover{
+	color:#036;
+	text-decoration:underline;
+	}
+	
+.field-name-field-tags {
+	font-family:'Roboto',Helvetica,sans-serif; 
+	font-size:.8em;
+	float:left;
+	padding-right:5px
+}
+.field-name-field-tags a {
+	color: #fff;
+  background-color: #889;
+  padding: 3px 5px;
+  border-radius: 2px;
+}
+.field-name-field-tags a:hover {
+	text-decoration:underline;
+	}
+
+.field-name-field-tags .field-item {
+	display:-webkit-inline-box;
+	padding-right:2px;
+}
+	
+	.field-name-field-editor {
+	font-family:'Roboto',Helvetica,sans-serif;
+	font-size:.85em;
+	margin-bottom:10px;
+	color:#333
+}
+
+.field-name-field-editor a {
+	color:#333
+}
+
+.field-name-field-editor a:hover {
+	color:#333;
+	text-decoration:underline
+}
+	
+div.field-name-field-genre {
+	font-family:'Oswald', Helvetica, sans-serif;
+	font-size:1em;
+	font-weight:500;
+	text-transform:uppercase;
+}
+div.field-name-field-genre a {
+	color:#039;
+}
+div.field-name-field-genre a:hover {
+	color:#06C;
+	text-decoration:underline;
+}
+
+div.field-name-field-reviewsection {
+	font-family:'Oswald', Helvetica, sans-serif;
+	font-size:1em;
+	text-transform:uppercase;
+}
+div.field-name-field-reviewsection a {
+	color:#039;
+}
+div.field-name-field-reviewsection a:hover {
+	color:#06C;
+	text-decoration:underline;
+}
+
+.field-name-field-translator {
+	font-family:'Libre Baskerville', Georgia, serif;
+	font-size:.85em;
+	margin-bottom:10px;
+	color:#000
+}
+
+.field-name-field-translator a {
+	color:#000
+}
+
+.field-name-field-translator a:hover {
+	color:#333;
+	text-decoration:underline
+}
+
+.label-above{
+	font-family:'Roboto',Helvetica,sans-serif;
+	font-size: .75em;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.view-90-years {
+  background-color: #f7f7f7;
+  padding: 10px;
+    }
+
+.views-field-title a:hover {
+	text-decoration:underline
+}
+
+.views-indented-body {
+	margin-left: 25px;
+	font:.8em 'Roboto',Helvetica,sans-serif;
+	color:#000
+}
+
+.views-list {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.views-list-taxonomy {
+	list-style: none;
+}
+
+div.view-neustadt-prize-sidebar ul li{
+	border-bottom:1px solid #f7f7f7;
+	color:#000;
+	border-top:1px solid transparent;
+	padding:8px 0;
+	
+}
+/* Views Nivo Slider */
+
+.views-nivo-slider {
+	width: 825px;
+	height: 350px;
+	max-width: 100%;
+	}
+
+#views-nivo-slider-homepage-slideshow-block {
+	max-width: 100%;
+	width: 100% !important;
+	height: auto !important;
+	}
+
+.theme-default .nivo-caption {
+  font-family: 'Libre Baskerville',Georiga,serif;
+  padding: 15px;
+  text-align: center;
+}
+
+.theme-default .nivoSlider{
+	-webkit-box-shadow:none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+/* Views Homepage Slideshow with Titles to Right - added 1/7/19 JRB */
+
+.view-homepage-slideshow {
+	margin-top: .5em;
+}
+
+#views_slideshow_cycle_main_homepage_slideshow-block_1 {
+	width:60%;
+	overflow: hidden;
+}
+
+.views-slideshow-controls-bottom {
+  max-width: 40%;
+	padding-left: 1em;
+}
+
+.views-field-field-featuredimage, .views_slideshow_slide, .views-slideshow-cycle-main-frame {
+	width:100% !important;
+	display:block;
+}
+
+
+.views_slideshow_pager_field > div {
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc; 
+}
+
+.views_slideshow_pager_field div {
+	display: block !important;
+}
+
+.views_slideshow_pager_field a {
+	color: #333;
+}
+
+.views_slideshow_pager_field .active {
+	text-decoration: underline;
+}
+
+.views_slideshow_pager_field .views-content-field-genre{
+	display:block;
+	font-family: 'Oswald', Arial, sans-serif;
+	text-transform:uppercase;
+}
+
+.views_slideshow_pager_field .views-content-field-richtitle{
+	font-size: 1.2em;
+}
+.skin-default {
+	display: inline-flex;
+	width: 100%;
+	height: auto;
+}
+
+/* More Views Styles */
+.views-taxonomy-h2 {
+	margin-bottom: 0px;
+}
+
+.views-taxonomy-body {
+	margin-bottom: .5em;
+}
+
+.view-author-overview .attachment, .view-translator-overview .attachment {
+	text-transform: uppercase;
+  font-family: 'Roboto',Helvetica,sans-serif;
+  font-size: .9em;
+	padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+
+/* DRUPAL STYLING FOR PIGEON */
+
+#pigeon-widget-status {
+	display: block;
+	font-family: 'Roboto',Helvetica,sans-serif;
+	text-align: right;
+	padding-right:12px;
+}
+
+#pigeon-widget-status ul {
+	display: inline-block;
+	list-style: none;
+	list-style-image: none;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+#pigeon-widget-status li {float:right; display:contents;}
+
+#pigeon-widget-status ul li a { color: #898989; border-left: 1px solid #dcdcdc; padding-left: 10px; margin-left: 13px; }
+#pigeon-widget-status ul li a:hover { color: #039; }
+#pigeon-widget-status ul li:first-child a { border: none; padding: 0; margin: 0; }
+
+	
+/* DRUPAL STYLING FOR GRID LAYOUT */
+
+.two-column-grid, .three-column-grid, .four-column-grid {
+	text-align: center;
+	margin-bottom: 1.5em;
+}
+
+.views-view-grid {
+	display: table;
+	table-layout: fixed;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+	}
+	
+/* DRUPAL STYLING FOR RECOOMMENDED READING GRID */
+
+#block-views-recommended-reading-block, #block-views-recommended-reading-block-1 {
+  margin: 10px 0;
+    }
+#block-views-recommended-reading-block h3, #block-views-recommended-reading-block-1 h3, #block-views-recommended-reading-block-2 h3, #block-views-book-reviews-block-1 h3 {
+	font-family: "Oswald";
+  padding-bottom: .25em;
+  border-bottom: 1px solid #ccc;
+}
+
+.three-column-recs {
+  display: table-cell;
+	padding: 5px;
+  text-align: center;
+  vertical-align: top;
+  width: 30%;
+    }
+	
+
+/* DRUPAL STYLING FOR ODD AND EVEN ROWS IN LIST OUTPUTS */
+
+li.views-row-taxonomy{
+	border-bottom:thin solid #ccc;
+	padding:10px;
+}
+
+li.views-row-news{
+	border-bottom:thin dotted #333;
+	padding:10px;
+}
+
+.views-row-taxonomy{
+	border-bottom:thin dotted #333;
+	padding:10px;
+}
+
+/* 404 pages */
+div.view-id-404_pages {
+	text-align: center;
+}
+
+div.view-id-404_pages div.field-content>p {
+	line-height: 1.75em;
+	font-size: 1.5em;
+	padding: 10px;
+}
+
+div.error-navbox {
+	background-color: #DE514C;
+	font: .8em 'Roboto',Helvetica,sans-serif;
+	padding: 10px;
+	padding-bottom:0px;
+	font-size: 1.5em;
+	line-height: 1.75em;
+}
+/* End 404 pages */
+
+/* DRUPAL STYLING FOR NEUSTADT PRIZE LAUREATE SIDEBAR */
+
+
+/*div.view-display-id-attachment_1 a.active{
+font-weight: bold;
+font-size: 1.5em;
+}*/
+a.menu-parent-caps {
+	text-transform: uppercase;
+}
+
+#comments-list .comment-meta,div.menu ul ul ul a,p.wp-caption-text {
+	font-style:italic
+}
+
+#global_footer a:hover,div.currentevent h2 a:hover,div.currentevent h1 a:hover {
+	text-decoration:underline
+}
+
+#box-table-a,#box-table-b {
+	font-family: 'Roboto',Helvetica,sans-serif;
+	font-size:.8em;
+	text-align:left;
+	border-collapse:collapse
+}
+
+
+
+.clear,.entry-title,.entry-meta {
+	clear:both
+}
+
+/* AddtoAny Style Customizations */
+.a2a_kit {
+	text-align: right;
+  display: block !important;
+}
+
+li.addtoany {
+	display: block;
+}
+.addtoany_list > a {
+	padding: 0 2px 16px 0;
+}
+
+#add-read { margin:30px 0 20px 0; clear:both; display:block; width:100%; padding:5px 0 0 0; height:44px; border-top: 1px solid #d9d9d9; border-bottom: 1px solid #d9d9d9; }
+#atstbx, #atstbx2{
+	float:right;
+}
+addthis_horizontal_follow_toolbox {float:none;}
+.addthis_toolbox { float:right; margin:3px 0 0 0; width:150px }
+#rdbWrapper { float:left; width:275px }
+#rdb { float:left; background-color:#F3F3F3; height:25px; padding:1px 0 0 5px; margin-top:-1px }
+.addthisstyling {
+	padding:5px;
+	float:right;
+	width:25%;
+}
+
+.print-link {
+	margin-right: 15px;
+}
+
+/* Custom Bootstrap Style Customizations  */
+
+.btn-primary {
+  color: #fff;
+  background-color: #036;
+  border-color: #024;
+	text-transform: uppercase;
+  font-family: "Oswald", Helvetica, serif;
+}
+
+.btn-primary:hover{
+	background-color: #048;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  background-color: #036;
+  border-color: #036;
+}
+.pagination>li>a, .pagination>li>span {
+  color: #036;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-transform: uppercase;
+  font-family: "Oswald", Helvetica, sans-serif;
+}
+
+/* Bootstrap Navbar Customizations */
+.navbar {
+	border-radius: 0px;
+	border: #e7e7e7 solid 1px;
+
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #000;
+	font-size:.9em;
+  text-transform: uppercase;
+}
+
+.navbar-toggle {
+  float: left;
+  margin-left: 10px;
+	border-radius:2px;
+}
+
+.navbar #block-search-form {
+  float: none;
+  margin: 0px;
+}
+
+.navbar.container-fluid {
+  margin-top: 0px;
+}
+
+.dropdown-menu>li>a {
+  padding: 7px 20px;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #036;
+  outline: 0;
+}
+
+/*.dropdown:hover>.dropdown-menu {
+			display:block;
+} Add back in if we want menus that open on hover. Causes issues for mobile navigation*/
+
+/* Custom styling for Tinypass Piano Go Dynamics */
+
+.tinypass-nav {
+	float: right;
+  font-family:'Roboto',Helvetica,sans-serif;
+  font-size: .75em;
+  line-height: 1.25em;
+  padding: 5px;
+}  
+    
+.sidr-class-tinypass-nav {
+	color: rgba(255,255,255,0.8);
+  font-size: 13px;
+  padding-left: 30px;
+}
+.sidr-class-tinypass-nav a {
+	color: rgba(255,255,255,0.8);
+}   
+
+#tinypass-button a {
+	background: #002044;
+  color: #FFFFFF!important;
+	font-family: 'Oswald', Helvetica, sans-serif;
+	text-transform:uppercase;
+  padding: 0.25em .5em;
+  line-height: 1.3;
+  display: inline-block;
+  border: 0 none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.subscribe-link {
+	visibility: hidden;
+	font-family: "Oswald";
+  font-size: .85em;
+  float: right;
+}
+
+.renew-link {
+visibility: hidden;
+}
+
+.thanks-message {
+visibility: hidden;
+}
+.sidr-class-subscribe-link {
+visibility: hidden;
+}
+
+.sidr-class-thanks-message {
+visibility: hidden;
+}
+
+.tpmMetered {
+visibility: visible;
+}
+
+.tpmExpired {
+visibility: hidden;
+}
+
+.tpmHasAccess {
+visibility: visible;
+}
+
+.tpm-counter {
+  padding: 30px !important;
+  line-height: 40px !important;
+  font-family: 'Roboto Slab',Times,serif !important;
+}
+
+.tpm-caption {
+  background: #bfced6 !important;
+  font-size: 14px !important;
+}
+
+.tpm-edge {
+  height: 40px !important;
+  background: #bfced6 !important;
+}
+
+.tpm-numeral {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+}
+.tpm-shadow {
+  height: 22px !important;
+}
+
+/* Custom MailChimp Form Embed Code  */
+.mc-banner {
+	padding-top:60px
+}
+
+#optin {
+	background: #efefef;
+	border: 1px solid #ccc;
+	padding: 20px 15px;
+	text-align: center
+}
+
+#optin h3 {
+font-family: 'Roboto',Helvetica,sans-serif;
+font-weight: bold;
+margin-bottom: 10px;
+}
+	#optin input {
+		background: #fff;
+		border: 1px solid #ccc;
+		font-size: 11px;
+		margin-bottom: -10px;
+		padding: 8px 10px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		-moz-box-shadow: 0 2px 2px #ddd;
+		-webkit-box-shadow: 0 2px 2px #ddd;
+		box-shadow: 0 2px 2px #ddd;
+		width: 100%;
+	}
+		#optin input.name { background: #fff url(../images/name.png) no-repeat 10px center; padding-left: 35px }
+		#optin input.email { background: #fff url(../images/email.png) no-repeat 10px center; padding-left: 35px }
+		#optin input[type="submit"] {
+			background: #002044;
+			border: 1px solid #0d1b3c;
+			color: #fff;
+			cursor: pointer;
+			font-family: 'Roboto',Helvetica,sans-serif;
+			font-size: 15px;
+			font-weight: bold;
+			padding: 7px 0;
+			text-shadow: -1px -1px #0d1b3c;
+			width: 100%
+		}
+			#optin input[type="submit"]:hover { color: #c6ffd1 }
+/*End of MailChimp Form Embed Code */
+
+/* Custom Views Accordion Plugin Styles for TOC - added 12/13/18 JRB */
+
+#block-views-sections-sidebar-toc {
+	background: #f7f7f7;
+}
+
+#block-views-sections-sidebar-toc h2 {
+	color: #333;
+	padding:1em 1.5em;
+}
+
+.sidebar-toc-title {
+	font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: .9em;
+	font-weight: bold;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+	border-top-right-radius: 0px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl{
+	border-top-left-radius: 0px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+	border-bottom-left-radius: 0px;}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{	
+	border-bottom-right-radius: 0px;
+}
+
+.ui-accordion h3.ui-accordion-header {
+	border-top: 2px solid #fff;
+	font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: .9em;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0;
+	background: #f7f7f7;
+}
+
+.ui-accordion .views-row {
+	font-family: 'Roboto',Helvetica,sans-serif;
+  font-size: .85em;
+  line-height: 1.4em;
+  margin-bottom: .95em;
+	padding: .25em 2.2em; 
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	border: none;
+	background: #f7f7f7;
+
+}
+
+.ui-widget-content {
+	border:none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	border:none;
+	background: #f7f7f7;
+}
+
+
+/* new add css */
+
+hr{
+	opacity: 1;
+}
+.site-logo img{
+	width: 697px;
+}
+.menu.navbar-nav{
+	margin: 0;
+}
+.navbar-nav li.nav-item a {
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #000 !important;
+	font-size: .9em;
+}
+.btn-search{
+	background-color: #036;
+	border-color: #024;
+	color: #fff;
+	border-radius: 0 0.25rem 0.25rem 0;
+}
+.footer .navbar-nav li.nav-item a{
+	color: #fff !important;
+	padding: 0;
+	text-transform: capitalize;
+	/* margin-bottom: 0.25rem; */
+}
+.footer .wltfooter ul.navbar-nav{
+	margin-bottom: 1rem;
+}
+.menu .dropdown-menu .nav-item a.is-active{
+	background-color: #036;
+	color: #fff !important;
+}
+.menu .dropdown-menu .nav-item a{
+	font-size: 14px;
+	padding: 7px 20px;
+}
+.hfeed #navbar .dropdown >a.active{
+	color: #555 !important;
+	background-color: #e7e7e7;
+}
+
+.hfeed #navbar{
+	padding: 0;
+}
+
+@media (min-width: 992px){
+	#navbar.navbar-expand-lg .navbar-nav .nav-link{
+		padding: 10px 15px;
+	}
+
+	/* .hfeed #navbar.navbar-expand-lg .navbar-nav .nav-link{
+		padding: 15px;
+	} */
+}

@@ -1,0 +1,290 @@
+
+{#
+/**
+ * @file
+ * Default theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ *
+ * @ingroup themeable
+ */
+#}
+{{devel_dump(page)}}
+{{devel_dump(node)}}
+{{devel_dump(content)}}
+
+<div id="node-{{node.nid.value}}" class="{{classes}} clearfix" {{attributes}}>
+  {{author_picture}}
+  {{title_prefix}}
+  {{content.addtoany}}
+  {{content.field_genre}}
+  {% if page.highlighted %}
+   <div id="highlighted">{{page.highlighted }}</div>
+  {% endif %}
+  {{title_prefix}}
+
+  {% if node.field_richtitle %}
+   <h1 class="title" id="page-title">{{node.field_richtitle.value}}</h1>
+   {% elseif (node.title)%}
+    <h1 class="title" id="page-title">{{node.title.value}}</h1>
+	{% else %}
+	 {% if is_front %}
+	   {# if(arg(0)!="magazine" && arg(0)!="taxonomy" && arg(0)!="error"){
+		 print '<h1 class="title" id="page-title">'.$title.'</h1>';
+		} #}
+	 {% endif %}
+  {% endif %}
+  {% if node.field_editorialnote %}
+   {{ attach_library('wltbootstrap/global-styling') }}
+  {% endif %}
+  	{% if page == FALSE %}
+	  <h2 {{title_attributes}}><a href="{{node_url}}">{{node.title.value}}</a></h2>
+	{% endif %}
+	{{title_suffix}}
+	{% if display_submitted %}
+	     <div class="submitted">
+           {# <?php print $submitted; ?> #}
+    </div>
+	{% endif %}
+	<div class="content pigeon-first-p"{{content_attributes}}>
+		<div class="pigeon-context-promotion" style="display:none;">
+	<!-- This is where you can promote your content. -->
+	<!-- The link with a class of pigeon-open will open the pigeon modal -->
+	<p>This page is available to subscribers. <a href="https://my.worldlit.org" class="pigeon-open">Click here to sign in or get access</a>.</p>
+   </div>
+      {# We hide the comments and links now so that we can render them later. #}
+	  {{ content|without('comments','links') }}
+	<div class="clear"></div>
+  	<div class="left3colsidebar">
+	<div style="overflow:hidden">
+	{# /**
+	* The previous overflow:hidden div makes sure Recommended Reading always left-aligns
+	* The following foreach populates $pubarray with all the
+	* taxonomy term ids that are set in pub options
+	*/ #}
+<div>
+{# <?php
+
+/**
+ * Themes all article nodes
+ * ORIGINAL: http://api.drupal.org/api/drupal/modules--node--node.tpl.php/7
+ */
+?>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<?php
+    // We hide the addtoany buttons and links now so that we can render them later.
+    hide($content['addtoany']);
+?>
+	<?php print $user_picture; ?>
+	<?php print render($title_prefix); ?>
+	<?php print render($content['addtoany']); ?>
+	<?php print render($content['field_genre']); ?>
+	<?php /* INCLUDE (MOST OF) THIS FOR SPECIFIC PAGE TEMPLATE SUGGESTIONS */ ?>
+        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+        <?php print render($title_prefix); ?>
+        <?php
+        	if ($node = menu_get_object()) {
+				if (!empty($node->field_richtitle)){
+					print '<h1 class="title" id="page-title">'.$node->field_richtitle['und'][0]['value'].'</h1>';
+				}
+				elseif($title){
+					print '<h1 class="title" id="page-title">'.$title.'</h1>';
+				}
+			} else {
+				if(!drupal_is_front_page()){
+					if(arg(0)!="magazine" && arg(0)!="taxonomy" && arg(0)!="error"){
+					print '<h1 class="title" id="page-title">'.$title.'</h1>';
+					}
+				}
+
+			} //testing this out
+		?>
+	
+	<?php //Add footnotes javascript to articles that have footnotes - JRB 8/18/16
+	 if (!empty($node->field_editorialnote)){
+			 drupal_add_js(drupal_get_path('theme', 'wlt') . '/js/footnotes.js');	 
+			 }
+			 ?>	 
+			 
+	<?php if (!$page): ?>
+	<h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+	<?php endif; ?>
+	<?php print render($title_suffix); ?>
+
+	<?php if ($display_submitted): ?>
+    <div class="submitted">
+      <?php print $submitted; ?>
+    </div>
+	<?php endif; ?>
+
+	<div class="content pigeon-first-p"<?php print $content_attributes; ?>>
+		<div class="pigeon-context-promotion" style="display:none;">
+	<!-- This is where you can promote your content. -->
+	<!-- The link with a class of pigeon-open will open the pigeon modal -->
+	<p>This page is available to subscribers. <a href="https://my.worldlit.org" class="pigeon-open">Click here to sign in or get access</a>.</p>
+</div>
+    <?php
+      // We hide the comments and links now so that we can render them later.
+      hide($content['comments']);
+      hide($content['links']);
+      print render($content);
+    ?>
+    <div class="clear"></div>
+  	<div class="left3colsidebar">
+    	<div style="overflow:hidden">
+    		<?php
+    			/**
+    			 * The previous overflow:hidden div makes sure Recommended Reading always left-aligns
+    			 * The following foreach populates $pubarray with all the
+    			 * taxonomy term ids that are set in pub options
+    			 */
+    			$pubarray = array();
+    			if(!empty($node->field_puboptions[LANGUAGE_NONE])){
+					foreach($node->field_puboptions[LANGUAGE_NONE] as $puboption){
+						array_push($pubarray, $puboption['tid']);
+					}
+    			}
+			if(!empty($node->field_editorialnote[LANGUAGE_NONE])){ //Renders any editorial notes
+    				foreach($node->field_editorialnote[LANGUAGE_NONE] as $ednote){
+    					print $ednote['value']; //Wrap in <p> if you stop using WYSIWYG editors that autowrap.
+    				}
+    			}
+    			if(in_array('60',$pubarray)){ //Checks for author bio checkbox
+    				$count = 0;
+    				if(!empty($node->field_author[LANGUAGE_NONE])) {
+    				foreach($node->field_author[LANGUAGE_NONE] as $author){ 
+    					if(in_array('61',$pubarray)){ //Checks for author bio pic checkbox
+    						if(!empty($author['taxonomy_term']->field_biopic[LANGUAGE_NONE])){
+								$biopic = $author['taxonomy_term']->field_biopic[LANGUAGE_NONE][0];
+								/**
+								 * The following if statement makes sure divs don't wrap if there's another
+								 * image before this one, so the images all left-align properly.
+								 */
+								if($count > 0){
+									print '<div class="clear"></div> ';
+								} else { $count++; }	    						
+								print '<div class="imageleft">
+    								<img src="'.file_create_url($biopic['uri']).
+    								'" alt="'.$biopic['alt'].'" width="'.$biopic['width'].'" height="'.$biopic['height'].'" border="1" />';
+    							if(!empty($author['taxonomy_term']->field_biocaption[LANGUAGE_NONE])){
+    								$caption = $author['taxonomy_term']->field_biocaption[LANGUAGE_NONE][0];
+    								print '<br /><div class="phototagleft">'.$caption['value'].'</div>';    							
+    							} 
+								print '</div>';							 						
+							}
+    					}
+    					if(!empty($author['taxonomy_term']->field_biography[LANGUAGE_NONE])){
+    						print $author['taxonomy_term']->field_biography[LANGUAGE_NONE][0]['value'];
+    						print '<div class="clear"></div> ';
+    					}
+    				}
+    				}
+    			}
+    			if(in_array('63',$pubarray)){ //Checks for translator bio checkbox
+    				$count = 0;
+    				if(!empty($node->field_translator[LANGUAGE_NONE])) {
+    				foreach($node->field_translator[LANGUAGE_NONE] as $translator){ 
+    					if(in_array('3019',$pubarray)){ //Checks for translator bio pic checkbox
+    						if(!empty($translator['taxonomy_term']->field_biopic[LANGUAGE_NONE])){
+								$biopic = $translator['taxonomy_term']->field_biopic[LANGUAGE_NONE][0];
+								/**
+								 * The following if statement makes sure divs don't wrap if there's another
+								 * image before this one, so the images all left-align properly.
+								 */
+								if($count > 0){
+									print '<div class="clear"></div> ';
+								} else { $count++; }	    						
+								print '<div class="imageleft">
+    								<img src="'.file_create_url($biopic['uri']).
+    								'" alt="'.$biopic['alt'].'" width="'.$biopic['width'].'" height="'.$biopic['height'].'" border="1" />';
+    							if(!empty($translator['taxonomy_term']->field_biocaption[LANGUAGE_NONE])){
+    								$caption = $translator['taxonomy_term']->field_biocaption[LANGUAGE_NONE][0];
+    								print '<br /><div class="phototagleft">'.$caption['value'].'</div>';    							
+    							} 
+								print '</div>';							 						
+							}
+    					}
+    					if(!empty($translator['taxonomy_term']->field_biography[LANGUAGE_NONE])){
+    						print $translator['taxonomy_term']->field_biography[LANGUAGE_NONE][0]['value'];
+    						print '<div class="clear"></div> ';
+    					}
+    				}
+    				}
+    			}
+    			
+    		
+    		?>
+    	</div>
+    		
+  	</div>
+	</div>
+
+	<?php print render($content['links']); ?>
+
+	<?php print render($content['comments']); ?>
+
+</div> #}

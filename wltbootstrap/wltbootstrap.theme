@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * wltbootstrap theme file.
+ */
+/**
+ * Implements hook_preprocess_node().
+ */
+function wltbootstrap_preprocess_node(&$variables)
+{
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+}

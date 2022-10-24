@@ -1,0 +1,7 @@
+.views_slideshow_pager_field div {
+  display: block !important;
+}
+
+.views_slideshow_pager_field a {
+  color: #333;
+}

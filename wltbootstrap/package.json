@@ -1,0 +1,31 @@
+{
+  "name": "wltbootstrap",
+  "version": "1.0.0",
+  "description": "[Bootstrap 5](https://www.drupal.org/project/bootstrap5) subtheme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-cli": "^2.3.0",
+    "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-coffee": "latest",
+    "gulp-concat": "latest",
+    "gulp-concat-sourcemap": "latest",
+    "gulp-connect": "latest",
+    "gulp-minifier": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-remove-logging": "latest",
+    "gulp-resolve-dependencies": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "gulp-watch": "latest",
+    "gulp-wrap": "latest"
+  }
+}
